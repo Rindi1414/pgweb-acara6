@@ -36,7 +36,8 @@
                             <li><a class="dropdown-item" href="RumahSakit.html">Jumlah Rumah Sakit</a></li>
                             <li><a class="dropdown-item" href="Puskesmas.html">Jumlah Puskesmas</a></li>
                             <li><a class="dropdown-item" href="Agama.html">Agama</a></li>
-                            <li><a class="dropdown-item" href="PendudukJenisKelamin.html">Jumlah Penduduk Pria dan Wanita</a></li>
+                            <li><a class="dropdown-item" href="PendudukJenisKelamin.html">Jumlah Penduduk Pria dan
+                                    Wanita</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -55,7 +56,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h5>Jumlah Rumah Sakit</h5>
+                <h5>Jumlah Puskesmas</h5>
             </div>
             <div class="card-body">
                 <div id="chart"></div>
@@ -95,30 +96,27 @@
 
     <script>
         var options = {
-          series: [{
-          data: [2, 6, 2, 5, 1, 1, 2, 4]
-        }],
-          chart: {
-          type: 'bar',
-          height: 350
-        },
-        plotOptions: {
-          bar: {
-            borderRadius: 4,
-            horizontal: true,
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        xaxis: {
-          categories: ['Kembangan', 'Kebon Jeruk', 'Palmerah', 'Grogol Petamburan', 'Tambora', 'Taman Sari', 'Cengkareng', 'Kalideres'],
-        }
+            series: [8, 8, 10, 10, 9, 5, 10, 13],
+            chart: {
+                width: 450,
+                type: 'pie',
+            },
+            labels: ["Kembangan", "Kebon Jeruk", "Palmerah", "Grogol Petamburan", "Tambora", "Taman Sari", "Cengkareng", "Kalideres"],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 300
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
         };
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
-      
     </script>
 </body>
 

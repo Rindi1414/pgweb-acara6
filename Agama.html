@@ -35,7 +35,7 @@
                             <li><a class="dropdown-item" href="index.html">Jumlah Penduduk</a></li>
                             <li><a class="dropdown-item" href="RumahSakit.html">Jumlah Rumah Sakit</a></li>
                             <li><a class="dropdown-item" href="Puskesmas.html">Jumlah Puskesmas</a></li>
-                            <li><a class="dropdown-item" href="Agama.html">Agama</a></li>
+                            <li><a class="dropdown-item" href="Agama.html">Jumlah Agama</a></li>
                             <li><a class="dropdown-item" href="PendudukJenisKelamin.html">Jumlah Penduduk Pria dan Wanita</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -55,7 +55,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <h5>Jumlah Rumah Sakit</h5>
+                <h5>Presentase Agama</h5>
             </div>
             <div class="card-body">
                 <div id="chart"></div>
@@ -94,31 +94,41 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        var options = {
+         var options = {
           series: [{
-          data: [2, 6, 2, 5, 1, 1, 2, 4]
+            name: "Desktops",
+            data: [1961926, 271537, 150235, 2780, 202123, 988]
         }],
           chart: {
-          type: 'bar',
-          height: 350
-        },
-        plotOptions: {
-          bar: {
-            borderRadius: 4,
-            horizontal: true,
+          height: 350,
+          type: 'line',
+          zoom: {
+            enabled: false
           }
         },
         dataLabels: {
           enabled: false
         },
+        stroke: {
+          curve: 'straight'
+        },
+        title: {
+          text: 'Product Trends by Month',
+          align: 'left'
+        },
+        grid: {
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
         xaxis: {
-          categories: ['Kembangan', 'Kebon Jeruk', 'Palmerah', 'Grogol Petamburan', 'Tambora', 'Taman Sari', 'Cengkareng', 'Kalideres'],
+          categories: ['Islam', 'Protestan', 'Katolik','Hindu', 'Budha', 'Lainnya'],
         }
         };
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
-      
     </script>
 </body>
 

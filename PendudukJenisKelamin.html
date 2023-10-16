@@ -34,10 +34,8 @@
                         <ul class="dropdown-menu dropdown dropdown-menu-end">
                             <li><a class="dropdown-item" href="index.html">Jumlah Penduduk</a></li>
                             <li><a class="dropdown-item" href="RumahSakit.html">Jumlah Rumah Sakit</a></li>
-                            <li><a class="dropdown-item" href="#">Jumlah Puskesmas</a></li>
-                            <li><a class="dropdown-item" href="#">Jumlah SD</a></li>
-                            <li><a class="dropdown-item" href="#">Jumlah SMP</a></li>
-                            <li><a class="dropdown-item" href="#">Jumlah SMA</a></li>
+                            <li><a class="dropdown-item" href="Puskesmas.html">Jumlah Puskesmas</a></li>
+                            <li><a class="dropdown-item" href="Agama.html">Agama</a></li>
                             <li><a class="dropdown-item" href="PendudukJenisKelamin.html">Jumlah Penduduk Pria dan Wanita</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -99,7 +97,7 @@
         var options = {
             series: [{
                 name: 'Jumlah Penduduk Laki-Laki',
-                data:[155478,183010, 118000, 117866, 136513, 63613, 295819, 232249]
+                data:[155478 ,183010 , 118000, 117866, 136513, 63613, 295819, 232249]
             },
             {
                 name: 'Jumlah Penduduk Perempuan',
@@ -112,7 +110,7 @@
             plotOptions: {
                 bar: {
                     horizontal: false,
-                    columnWidth: '55%',
+                    columnWidth: '70%',
                     endingShape: 'rounded',
                     dataLabels:{
                         position: 'top',
@@ -132,7 +130,7 @@
             },
             yaxis: {
                 title: {
-                    text: 'Kecamatan'
+                    text: 'Jumlah Penduduk Pria dan Wanita'
                 }
             },
             fill: {
@@ -152,7 +150,7 @@
           },
           offsetY: -20,
           style: {
-            fontSize: '12px',
+            fontSize: '10px',
             colors: ["#304758"]
           }
         },
